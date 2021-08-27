@@ -1,0 +1,163 @@
+.header{
+	background-color: #c3c3c3;
+}
+.navbar-nav{
+	margin-left: 60px;
+}
+.navbar-nav li a{
+	font-size: 18px;
+}
+.navbar .form-inline .form-control{
+	font-size: 18px;
+}
+.navbar .form-inline button{
+	font-size: 18px;
+
+}
+
+
+.right{
+	background-color: #fa1;
+}
+
+.middle{
+	background-color: #ccc;
+	padding-top: 10px;
+}
+
+.menu{
+	background-color: #98a;
+}
+
+.social-media{
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 5px;
+}
+
+.social-media li{
+	display: inline-block;
+	padding: 8px;
+	line-height: 40px;
+
+}
+
+.d-block{
+	width: 300px;
+	height: 450px;
+	align-items: center;
+}
+.card-title{
+	text-align: center;
+}
+.mg-r{
+	margin-right: 450px;
+}
+.row ul{
+	list-style: none;
+
+}
+.row li{
+	display: inline-block;
+}
+
+.work-done{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.work-done h3{
+	margin-bottom: 30px;
+}
+
+
+#form-info{
+	margin-top: 50px;
+}
+
+.foot{
+	background-color: #ddd;
+}
+.foot .foot-link a:hover{
+	text-decoration: none;
+}
+.foot .foot-link a{
+	color:#000;
+}
+
+#form-info .form-group{
+	text-align: left;
+}
+#form-info .form-group input{
+	border-radius: 5px;
+}
+#form-info .form-group label{
+	font-size: 22px;
+}
+.gender{
+	font-size: 22px;
+}
+
+#form-info .form-group .form-select{
+	margin-left: 15px;
+	font-size: 14px;
+	padding: 10px;
+	background-color: #ddd;
+}
+.gender{
+	margin-bottom: 20px;
+}
+.backup{
+	box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);	
+	border-radius: 50px;*/
+}
+.website-title{
+	text-align: center;
+	padding-left: 500px;
+	padding-top: 20px;
+}
+
+/*about us starts*/
+
+.about-us .about-content{
+	border: 1px solid #ddd;
+	padding: 50px;
+	box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.about-us .about-content p{
+	font-size: 18px;
+	font-weight: 600;
+}
+.about-us .about-content h1{
+	text-align: center;
+	margin-bottom: 30px;
+}
+.about-us .foto{
+	height:200px;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.about-us .foto:hover img{
+	height: 110%;
+	width: 110%;
+	overflow: hidden;
+}
+
+.about-us .foto img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.contact-details{
+	border:1px solid #000;
+	padding:50px;
+}
+
