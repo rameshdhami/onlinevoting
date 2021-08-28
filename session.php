@@ -1,7 +1,6 @@
 <?php
    include('connection.php');
    session_start();
-   
    $user_check = $_SESSION['user_name'];
    
    $ses_sql = mysqli_query($db,"select username from admin where user_name = '$user_check' ");

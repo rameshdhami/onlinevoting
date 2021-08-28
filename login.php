@@ -1,12 +1,11 @@
 
     <?php require_once 'navbar.php'; ?>
+    <?php require_once 'connection.php'; ?>
     <?php 
     
 if (isset($_POST['btnLogin'])) {
   
   $err = [];
-  $voter_id = $_POST['voter_id'];
-  $Password = $_POST['password'];
 
  if (isset($_POST['voter_id']) && !empty($_POST['voter_id']) && trim($_POST['voter_id'])) {
     $voter_id = $_POST['voter_id'];
@@ -20,6 +19,30 @@ if (isset($_POST['btnLogin'])) {
     $err['password'] = 'Enter your password';
   }
 }
+ if (isset($err)) {
+    
+    $sql = "SELECT id FROM voter WHERE username = '$voter_id' and password = '$password'";
+      $result = mysqli_query($con,$sql);
+      // var_dump($result);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      // var_dump($row);
+      // $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      var_dump($count);
+      // If result matched $myusername and $mypassword, table row must be 1 row
+    
+      if($count == 1) {
+         // session_register("myusername");
+         $_SESSION['login_user'] = $voter_id;
+         header("location: userdashboard.php");
+         // header("location: voter_register.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+  }
+  
+
   
 ?>
     

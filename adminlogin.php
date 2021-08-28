@@ -16,27 +16,27 @@ if (isset($_POST['btnLogin'])) {
   }
 
   if (isset($_POST['password']) && !empty($_POST['password']) && trim($_POST['password'])) {
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
   } else {
     $err['password'] = 'Enter your password';
   }
 
   if (count($err) == 0) {
     //admin login
-    $sql = "SELECT id FROM admin WHERE user_name = '$user_name' and password = '$password'";
+   echo  $sql = "SELECT id,user_name FROM admin WHERE user_name = '$user_name' and password = '$password'";
       $result = mysqli_query($con,$sql);
-      // var_dump($result);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      // var_dump($row);
-      // $active = $row['active'];
-      
+       
       $count = mysqli_num_rows($result);
-      var_dump($count);
+     
       // If result matched $myusername and $mypassword, table row must be 1 row
     
       if($count == 1) {
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
          // session_register("myusername");
-         $_SESSION['login_user'] = $user_name;
+        session_start();
+
+         $_SESSION['admin_id'] = $row['id'];
+         $_SESSION['login_user'] = $row['user_name'];
          
          header("location: admindashboard.php");
       }else {

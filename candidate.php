@@ -92,6 +92,11 @@ if (isset($_POST['btnCandidate'])) {
 }
 
 ?>
+<?php
+  $sql= "SELECT * FROM `election` ORDER BY name";
+  $result=$con->query($sql);
+
+?>
     <section id="form-info">
     <div class="container backup">
         <div class="row">
@@ -107,9 +112,11 @@ if (isset($_POST['btnCandidate'])) {
                   <label for="contact number">Election</label><br>
                  <select class="form-select" aria-label="Default select example" name="election">
                       <option selected>Open this select menu</option>
-                      <option value="1">election11</option>
-                      <option value="2">election22</option>
-                       <option value="2">election33</option>
+                      <?php 
+                          while($row=$result -> fetch_assoc()){
+                      ?>
+                    <option value="<?php echo $row['id'] ?>"><?php echo $row['name']?></option>
+                  <?php } ?>
                     </select><br> 
                     <?php if (isset($err['election'])) { ?>
                     <span> <?php echo $err['election']; ?></span>

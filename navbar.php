@@ -1,10 +1,10 @@
 <!-- header -->
-<?php 
+<!-- <?php 
     session_start();
-    $username=$_SESSION['user_name'];
-    var_dump($username);
+   // $username=$_SESSION['user_name'];
+   // var_dump($username);
 ?>
-
+ -->
 <!doctype html>
 <html lang="en">
   <head>
